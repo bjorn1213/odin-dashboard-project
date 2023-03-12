@@ -1,10 +1,16 @@
+@import 'http://fonts.googleapis.com/css?family=Ubuntu';
+
 :root {
-    --main-color: #2578d6;
+    --primary-color: #2578d6;
     --secondary-color: #6732e2;
     --background-color: #cedadf;
+    --primary-font-color: #000000;
+    --secondary-font-color: #ffffff;
+    font-family: Ubuntu, Arial, Helvetica, sans-serif;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -16,19 +22,43 @@ html, body {
 }
 
 .sidebar {
-    background-color: var(--main-color);
+    color: var(--secondary-font-color);
+    background-color: var(--primary-color);
+    display: grid;
+    padding: 25px;
+    grid-template-rows: 75px 1fr;
 }
 
 .page-content {
-    background-color: blue;
     display: grid;
     grid-template-rows: 150px 1fr;
 }
 
+/* Sidebar */
+.sidebar-title {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.sidebar-content {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(6, auto) 20px repeat(3, auto) 1fr;
+    gap: 15px
+}
+
+.sidebar-icon {
+    justify-self: end;
+}
+
+/* Header */
 .headerbar {
     background-color: white;
 }
 
+/* Main page content */
 .main-page {
     background-color: var(--background-color);
 }

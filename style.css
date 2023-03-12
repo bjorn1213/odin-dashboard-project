@@ -1,9 +1,9 @@
 @import 'http://fonts.googleapis.com/css?family=Ubuntu';
 
 :root {
-    --primary-color: #2578d6;
-    --secondary-color: #6732e2;
-    --background-color: #cedadf;
+    --primary-color: #003049;
+    --secondary-color: #D62828;
+    --background-color: #ebeae4;
     --primary-font-color: #000000;
     --secondary-font-color: #ffffff;
     font-family: Ubuntu, Arial, Helvetica, sans-serif;
@@ -34,6 +34,34 @@ body {
     grid-template-rows: 150px 1fr;
 }
 
+/* Normalization of input elements */
+button,
+input,
+optgroup,
+select,
+textarea,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button[disabled],
+html input[disabled],
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 /* Sidebar */
 .sidebar-title {
     font-size: 2rem;
@@ -56,7 +84,98 @@ body {
 /* Header */
 .headerbar {
     background-color: white;
+    padding: 15px 30px;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
 }
+
+.header-tools {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-tools input {
+    width: 80%;
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--background-color);
+    padding: 0 1rem;
+}
+
+.header-tools input:focus {
+    border: none;
+    outline: none;
+}
+
+.btn-alerts {
+    --size: 40px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 100%;
+}
+
+.btn-alerts:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.btn-alerts:active {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.login-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+.header-main {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-main .profile-picture-big,
+.header-main .header-button {
+    grid-row: 1/-1;
+}
+
+.header-main .greeting{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+}
+
+.header-main .greeting-name{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+}
+
+.header-main button{
+    background-color: var(--primary-color);
+    color: var(--secondary-font-color);
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: calc(10px + 1rem);
+    padding: 10px;
+    width: 100px;
+}
+
+.header-main button:hover {
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.1);
+}
+
+.header-main button:active {
+    box-shadow: inset 1px 1px 10px rgba(0,0,0,0.2);
+}
+
+
 
 /* Main page content */
 .main-page {

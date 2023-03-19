@@ -302,3 +302,18 @@ input[type="search"]::-webkit-search-decoration {
     align-self: center;
     justify-self: center;
 }
+
+.project-item button {
+    --size: 40px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 100%;
+}
+
+.project-item button:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.project-item button:active {
+    background-color: rgba(0, 0, 0, 0.06);
+}

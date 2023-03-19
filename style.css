@@ -10,8 +10,8 @@
     --icon-dimensions: 25px; 
     --logo-dimensions: 50px; 
     --border-radius: 7px;
-    --avatar-small-dimensions: 30px;
-    --avatar-dimensions: 60px;
+    --avatar-small-dimensions: 45px;
+    --avatar-dimensions: 70px;
     font-family: Ubuntu, Arial, Helvetica, sans-serif;
 }
 
@@ -325,11 +325,20 @@ input[type="search"]::-webkit-search-decoration {
 
 .trend {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: var(--avatar-small-dimensions) 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 5px 15px;
 }
 
-.trend .icontje {
+.trend .tag{
+    align-self:end;
+}
+
+.trend .tag-descr {
+    color: var(--tertiary-font-color)
+}
+
+.trend > .avatar-small {
     grid-column: 1;
     grid-row: 1/-1;
     align-self: center;
@@ -341,6 +350,13 @@ input[type="search"]::-webkit-search-decoration {
     height: var(--size);
     width: var(--size);
     border-radius: 100%;
+}
+
+.project-btn .btn-icon {
+    --size: 25x;
+    height: var(--size);
+    width: var(--size);
+
 }
 
 .project-item button:hover {

@@ -7,6 +7,8 @@
     --primary-font-color: #000000;
     --secondary-font-color: #ffffff;
     --tertiary-font-color: #696969;
+    --icon-dimensions: 25px; 
+    --logo-dimensions: 50px; 
     --border-radius: 7px;
     font-family: Ubuntu, Arial, Helvetica, sans-serif;
 }
@@ -27,8 +29,8 @@ body {
     color: var(--secondary-font-color);
     background-color: var(--primary-color);
     display: grid;
-    padding: 25px;
-    grid-template-rows: 75px 1fr;
+    padding: 20px;
+    grid-template-rows: 100px 1fr;
 }
 
 .page-content {
@@ -65,9 +67,17 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /* Sidebar */
+.logo {
+    width: var(--logo-dimensions);
+    height: var(--logo-dimensions);
+    margin-right: 10px;
+}
+
 .sidebar-title {
     font-size: 2rem;
     font-weight: bolder;
+    
+    display: flex;
 }
 
 .sidebar-content {
@@ -80,6 +90,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .sidebar-icon {
+    width:  var(--icon-dimensions);
+    height: var(--icon-dimensions);
     justify-self: end;
 }
 

@@ -6,6 +6,8 @@
     --background-color: #ebeae4;
     --primary-font-color: #000000;
     --secondary-font-color: #ffffff;
+    --tertiary-font-color: #696969;
+    --border-radius: 7px;
     font-family: Ubuntu, Arial, Helvetica, sans-serif;
 }
 
@@ -181,4 +183,122 @@ input[type="search"]::-webkit-search-decoration {
 .main-page {
     background-color: var(--background-color);
     box-shadow: 0px 1px 9px -5px inset;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 25px;
+}
+
+.main-page h1 {
+    font-size: 1.5rem;
+}
+
+.main-page h1,
+.main-page h2,
+.main-page p{
+    margin: 0;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1rem;
+    grid-auto-rows: 250px;
+    gap: 25px;
+}
+
+.projects-title {
+    grid-column: 1/-1;
+
+}
+
+.main-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.project-item {
+    border-left: var(--border-radius) solid var(--secondary-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 1fr 2rem;
+    gap: 5px;
+}
+
+.project-item p {
+    overflow:auto;
+    color: var(--tertiary-font-color);
+}
+
+.project-item h1 {
+    font-size: 1.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.project-item-btns {
+    justify-self: end;
+}
+
+.project-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem auto 2rem 1fr;
+    gap: 10px;
+}
+
+.announcement {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.announcement h2 {
+    font-size: 1.1rem;
+}
+
+.announcement p {
+    color: var(--tertiary-font-color);
+    justify-self: start;
+    font-size: 0.9rem;
+}
+
+.announcement p::after {
+    content: "...";
+}
+
+.project-sidebar-item .main-card{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.announcement {
+    border-bottom: 1px solid var(--tertiary-font-color);
+    padding: 5px 0;
+}
+
+#announcements .main-card .announcement:last-child {
+    border-bottom: none;
+}
+
+#announcements .main-card {
+    gap: 0;
+}
+
+.trend {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trend .icontje {
+    grid-column: 1;
+    grid-row: 1/-1;
+    align-self: center;
+    justify-self: center;
 }

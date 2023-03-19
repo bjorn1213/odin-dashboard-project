@@ -324,6 +324,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .trend {
+    margin: 8px 0px;
     display: grid;
     grid-template-columns: var(--avatar-small-dimensions) 1fr;
     grid-template-rows: 1fr 1fr;

@@ -180,4 +180,5 @@ input[type="search"]::-webkit-search-decoration {
 /* Main page content */
 .main-page {
     background-color: var(--background-color);
+    box-shadow: 0px 1px 9px -5px inset;
 }
